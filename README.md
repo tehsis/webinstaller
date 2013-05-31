@@ -1,6 +1,8 @@
 MozInstaller
 ============
 
+[Installing Mozilla webapps](http://https://developer.mozilla.org/en-US/docs/Web/API/Apps.install/ "Install") even easier.
+
 Description
 -----------
 This lib helps developers to make its apps installable on Firefox.
