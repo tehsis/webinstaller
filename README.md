@@ -18,8 +18,44 @@ Usage
     });
   ```
 
+    When the plugin has been initiliazed (via calling the constructor) it will add classes to the     body according the webapp status so you can style your app:
+
+    ```css
+        .installed button.install, button.install {
+            display: none;
+        }
+
+        .not-installed button.install {
+            display: block;
+        }
+
+        .error-message {
+            display: none;
+        }
+
+        .install-error .error-message {
+            display: block;
+        }
+    ```
+
+    No classes are added on browsers which doesn't suppor mozApps.
+    
+    The default classes are:
+
+```
+    * installed: When the app is already installed.
+    * not-installed: When the app is not installed.
+    * install-error: When something goes wrong.
+```
+
+
+
 More information on Firefox webapps:
 ------------------------------------
 
 https://developer.mozilla.org/en-US/docs/Web/Apps
 
+Disclaimer
+----------
+
+Neither the lib or the author has relationship with Mozilla.
