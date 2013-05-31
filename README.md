@@ -1,4 +1,4 @@
-MozInstaller
+WebInstaller
 ============
 
 [Installing Mozilla webapps](http://https://developer.mozilla.org/en-US/docs/Web/API/Apps.install/ "Install") even easier.
@@ -13,14 +13,14 @@ Usage
 -----
 
 ```javascript
-var installer = new MozInstaller("http://myhost.com/manifest.webapp");
+var installer = new WebInstaller("http://myhost.com/manifest.webapp");
 
 $("button.install").click(function() {
   installer.install();
 });
 ```
 
-When the plugin has been initiliazed (via calling the constructor) it will add classes to the     body according the webapp status so you can style your app:
+When the plugin has been initiliazed (via calling the constructor) it will add classes to the body according the webapp status so you can style your app:
 
 ```css
     .installed button.install, button.install {
@@ -54,8 +54,3 @@ More information on Firefox webapps:
 ------------------------------------
 
 https://developer.mozilla.org/en-US/docs/Web/Apps
-
-Disclaimer
-----------
-
-Neither the lib or the author has relationship with Mozilla.

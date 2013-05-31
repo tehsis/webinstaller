@@ -1,5 +1,5 @@
 (function() {
-	var MozInstaller = function(options) {
+	var WebInstaller = function(options) {
 		var self = this;
 		self.manifest = options.manifest || options;
 		self.classes = options.classes || {
@@ -27,7 +27,7 @@
 		} 
 	};
 
-	MozInstaller.prototype.install = function() {
+	WebInstaller.prototype.install = function() {
 		var self = this;
 		if (navigator.mozApps.checkInstalled(self.manifest)) { 
 			var request = navigator.mozApps.getSelf();
@@ -57,9 +57,9 @@
 
 
 	if ( typeof define === "function" && define.amd ) {
- 		define([], function () { return MozInstaller; } );
+ 		define([], function () { return WebInstaller; } );
 	} else {
-		window.MozInstaller = window.MozInstaller || MozInstaller;
+		window.WebInstaller = window.WebInstaller || WebInstaller;
 	}
 
 }) ();
