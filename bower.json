@@ -1,5 +1,10 @@
 {
-  "name": "Web Installer",
+  "name": "WebInstaller",
   "version": "1.0.0",
-  "main": "webinstaller.js"
+  "main": "webinstaller.js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components"
+  ]
 }
