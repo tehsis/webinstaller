@@ -44,7 +44,7 @@
 
 					install_request.onerror = function() {
 						self.parent.classList.remove(self.classes.not_installed);
-						self.parent.classList.remove(self.classes.error);
+						self.parent.classList.add(self.classes.error);
 					}
 				};
 			};
