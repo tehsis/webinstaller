@@ -5,8 +5,9 @@
 		self.classes = options.classes || {
 			installed: "installed",
 			not_installed: "not-installed",
+            not_installable: "not-installable",
 			error: "install-error"
-		}
+		};
 
 		self.parent = options.parent || document.body;
 
@@ -16,15 +17,16 @@
 				if (request.result) {
 					self.parent.classList.add(self.classes.installed);
 				} else {
-					self.parent.classList.add(self.classes.not_installed
-		);
+					self.parent.classList.add(self.classes.not_installed);
 				}
-			}
+			};
 
 			request.onerror = function() {
 				self.parent.classList.add(self.classes.error);
-			}
-		} 
+			};
+		} else {
+            self.parent.classList.add(self.classes.not_installable);
+        }
 	};
 
 	WebInstaller.prototype.install = function() {
@@ -34,30 +36,31 @@
 
 			request.onsuccess = function() {
 				if (!request.result) {
-					var install_request = navigator.mozApps.install(self.manifest); 	
+                    var install_request = navigator.mozApps.install(self.manifest);
 
 					// Apparently this is failing on Android and desktop due: https://bugzilla.mozilla.org/show_bug.cgi?id=806597
 					install_request.onsuccess = function() {
 						self.parent.classList.remove(self.classes.not_installed);
 						self.parent.classList.add(self.classes.installed);
-					}
+                    };
 
 					install_request.onerror = function() {
 						self.parent.classList.remove(self.classes.not_installed);
 						self.parent.classList.add(self.classes.error);
-					}
-				};
+                        console.log(this.error.name);
+					};
+				}
 			};
 
 			request.onerror = function() {
 				self.parent.classList.add(self.classes.error);
-			}
-		};
+			};
+		}
 	};
 
 
 	if ( typeof define === "function" && define.amd ) {
- 		define([], function () { return WebInstaller; } );
+        define([], function () { return WebInstaller; } );
 	} else {
 		window.WebInstaller = window.WebInstaller || WebInstaller;
 	}
