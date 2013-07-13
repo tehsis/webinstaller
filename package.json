@@ -1,0 +1,30 @@
+{
+  "name": "webinstaller",
+  "version": "0.0.1",
+  "description": "Install your webapp everywhere",
+  "main": "webinstaller.js",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tehsis/webinstaller.git"
+  },
+  "keywords": [
+    "webapps",
+    "firefoxOS",
+    "chrome",
+    "iOS",
+    "Mozilla",
+    "Firefox"
+  ],
+  "author": "Pablo Terradillos",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tehsis/webinstaller/issues"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-jshint": "~0.6.0"
+  }
+}
