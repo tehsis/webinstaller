@@ -40,13 +40,12 @@ When the plugin has been initiliazed (via calling the constructor) it will add c
     }
 ```
 
-No classes are added on browsers which doesn't suppor mozApps.
-    
 The default classes are:
 
 - installed: When the app is already installed.
 - not-installed: When the app is not installed.
 - install-error: When something goes wrong.
+- not-installabe: When the browser doesn't support webapps
 
 
 
