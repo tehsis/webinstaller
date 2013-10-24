@@ -9,6 +9,32 @@ This lib helps developers to make its apps installable on Firefox.
 It will append to body (or parent defined at constructor) different classes
 wheter the app is installed, not installed or installations error.
 
+Installing
+-----
+You can use bower to install the script
+
+```
+$bower install webinstaller --save
+```
+
+And thenembed the script using a script tag or requirejs.
+
+```html
+<script src="libs/webinstaller/webinstaller.min.js" />
+```
+or
+
+```html
+<script src="libs/webinstaller/webinstaller.js" />
+```
+or
+
+```javascript
+define(['webinstaller'], function(WebInstaller) {
+  // ..
+});
+```
+
 Usage
 -----
 
