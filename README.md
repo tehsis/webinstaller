@@ -74,8 +74,12 @@ The default classes are:
 - not-installabe: When the browser doesn't support webapps
 
 
-
 More information on Firefox webapps:
 ------------------------------------
 
 https://developer.mozilla.org/en-US/docs/Web/Apps
+
+TODO
+----
+
+* Read the manifest file and add [the propper tags to have a "webapp" on iOS](https://developer.apple.com/library/ios/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html)
