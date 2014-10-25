@@ -29,11 +29,6 @@ And thenembed the script using a script tag or requirejs.
 ```
 or
 
-```html
-<script src="libs/webinstaller/webinstaller.js" />
-```
-or
-
 ```javascript
 define(['webinstaller'], function(WebInstaller) {
   // ..
